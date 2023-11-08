@@ -1,0 +1,334 @@
+[1/13] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\esp\esp-idf\Espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\build\bootloader\esp-idf\esptool_py && D:\esp\esp-idf\Espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6710 bytes. 0x8f0 bytes (8%) free.
+[2/11] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/mypH.c.obj
+In file included from d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\myph.h:22,
+                 from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/mypH.c:7:
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/mypH.c: In function 'init_param_pH':
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/mypH.c:36:32: warning: passing argument 1 of 'read_nvs' makes integer from pointer without a cast [-Wint-conversion]
+   36 |                 err = read_nvs(nvsHandle,"storage",PH_4_VAL_ADDR, (uint32_t *)&_pH_4_voltage);
+      |                                ^~~~~~~~~
+      |                                |
+      |                                nvs_handle_t * {aka long unsigned int *}
+In file included from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/mypH.c:9:
+d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\nvs_interface.h:21:33: note: expected 'nvs_handle_t' {aka 'long unsigned int'} but argument is of type 'nvs_handle_t *' {aka 'long unsigned int *'}
+   21 | esp_err_t read_nvs(nvs_handle_t nvs_handle
+      |                    ~~~~~~~~~~~~~^~~~~~~~~~
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/mypH.c:49:32: warning: passing argument 1 of 'read_nvs' makes integer from pointer without a cast [-Wint-conversion]
+   49 |                 err = read_nvs(nvsHandle, "storage",PH_6_86_VAL_ADDR, (uint32_t *)&_pH_6_86_voltage);
+      |                                ^~~~~~~~~
+      |                                |
+      |                                nvs_handle_t * {aka long unsigned int *}
+In file included from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/mypH.c:9:
+d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\nvs_interface.h:21:33: note: expected 'nvs_handle_t' {aka 'long unsigned int'} but argument is of type 'nvs_handle_t *' {aka 'long unsigned int *'}
+   21 | esp_err_t read_nvs(nvs_handle_t nvs_handle
+      |                    ~~~~~~~~~~~~~^~~~~~~~~~
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/mypH.c:61:32: warning: passing argument 1 of 'read_nvs' makes integer from pointer without a cast [-Wint-conversion]
+   61 |                 err = read_nvs(nvsHandle,"storage", PH_9_VAL_ADDR,(uint32_t *) &_pH_9_voltage);
+      |                                ^~~~~~~~~
+      |                                |
+      |                                nvs_handle_t * {aka long unsigned int *}
+In file included from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/mypH.c:9:
+d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\nvs_interface.h:21:33: note: expected 'nvs_handle_t' {aka 'long unsigned int'} but argument is of type 'nvs_handle_t *' {aka 'long unsigned int *'}
+   21 | esp_err_t read_nvs(nvs_handle_t nvs_handle
+      |                    ~~~~~~~~~~~~~^~~~~~~~~~
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/mypH.c: In function 'get_pH_value':
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/mypH.c:153:31: warning: passing argument 1 of 'init_param_pH' makes pointer from integer without a cast [-Wint-conversion]
+  153 |                 init_param_pH(nvsHandle);
+      |                               ^~~~~~~~~
+      |                               |
+      |                               nvs_handle_t {aka long unsigned int}
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/mypH.c:26:35: note: expected 'nvs_handle_t *' {aka 'long unsigned int *'} but argument is of type 'nvs_handle_t' {aka 'long unsigned int'}
+   26 | void init_param_pH(nvs_handle_t * nvsHandle){
+      |                    ~~~~~~~~~~~~~~~^~~~~~~~~
+[3/11] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/EC.c.obj
+In file included from d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\ec.h:19,
+                 from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/EC.c:8:
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/EC.c: In function 'EC_init_param':
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/EC.c:26:32: warning: passing argument 1 of 'read_nvs' makes integer from pointer without a cast [-Wint-conversion]
+   26 |                 err = read_nvs(nvs_handle,"storage", KVALUEADDR_LOW, (uint32_t *)&EC_kvalueLow);
+      |                                ^~~~~~~~~~
+      |                                |
+      |                                nvs_handle_t * {aka long unsigned int *}
+In file included from d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\ec.h:10,
+                 from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/EC.c:8:
+d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\nvs_interface.h:21:33: note: expected 'nvs_handle_t' {aka 'long unsigned int'} but argument is of type 'nvs_handle_t *' {aka 'long unsigned int *'}
+   21 | esp_err_t read_nvs(nvs_handle_t nvs_handle
+      |                    ~~~~~~~~~~~~~^~~~~~~~~~
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/EC.c:37:40: warning: passing argument 1 of 'write_nvs_func' makes integer from pointer without a cast [-Wint-conversion]
+   37 |                         write_nvs_func(nvs_handle, "storage", KVALUEADDR_LOW, (uint32_t)EC_kvalueLow);
+      |                                        ^~~~~~~~~~
+      |                                        |
+      |                                        nvs_handle_t * {aka long unsigned int *}
+In file included from d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\ec.h:10,
+                 from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/EC.c:8:
+d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\nvs_interface.h:26:31: note: expected 'nvs_handle_t' {aka 'long unsigned int'} but argument is of type 'nvs_handle_t *' {aka 'long unsigned int *'}
+   26 |                  nvs_handle_t nvs_handle
+      |                  ~~~~~~~~~~~~~^~~~~~~~~~
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/EC.c:43:32: warning: passing argument 1 of 'read_nvs' makes integer from pointer without a cast [-Wint-conversion]
+   43 |                 err = read_nvs(nvs_handle,"storage", KVALUEADDR_HIGH, (uint32_t *)&EC_kvalueHigh);
+      |                                ^~~~~~~~~~
+      |                                |
+      |                                nvs_handle_t * {aka long unsigned int *}
+In file included from d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\ec.h:10,
+                 from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/EC.c:8:
+d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\nvs_interface.h:21:33: note: expected 'nvs_handle_t' {aka 'long unsigned int'} but argument is of type 'nvs_handle_t *' {aka 'long unsigned int *'}
+   21 | esp_err_t read_nvs(nvs_handle_t nvs_handle
+      |                    ~~~~~~~~~~~~~^~~~~~~~~~
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/EC.c:52:40: warning: passing argument 1 of 'write_nvs_func' makes integer from pointer without a cast [-Wint-conversion]
+   52 |                         write_nvs_func(nvs_handle, "storage", KVALUEADDR_HIGH, (uint32_t)EC_kvalueHigh);
+      |                                        ^~~~~~~~~~
+      |                                        |
+      |                                        nvs_handle_t * {aka long unsigned int *}
+In file included from d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\ec.h:10,
+                 from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/EC.c:8:
+d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\nvs_interface.h:26:31: note: expected 'nvs_handle_t' {aka 'long unsigned int'} but argument is of type 'nvs_handle_t *' {aka 'long unsigned int *'}
+   26 |                  nvs_handle_t nvs_handle
+      |                  ~~~~~~~~~~~~~^~~~~~~~~~
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/EC.c: In function 'EC_calibrate':
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/EC.c:126:47: warning: passing argument 4 of 'read_nvs' from incompatible pointer type [-Wincompatible-pointer-types]
+  126 |         read_nvs(nvs_handle, space_name, key, &KValueTemp);
+      |                                               ^~~~~~~~~~~
+      |                                               |
+      |                                               float *
+In file included from d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\ec.h:10,
+                 from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/EC.c:8:
+d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\nvs_interface.h:24:29: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'float *'
+   24 |                 , uint32_t *value);
+      |                   ~~~~~~~~~~^~~~~
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/EC.c:72:17: warning: unused variable 'sampling' [-Wunused-variable]
+   72 |         uint8_t sampling = 50;
+      |                 ^~~~~~~~
+[4/11] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/myDO.c.obj
+In file included from d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\mydo.h:21,
+                 from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/myDO.c:9:
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/myDO.c: In function 'init_param_DO':
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/myDO.c:29:32: warning: passing argument 1 of 'read_nvs' makes integer from pointer without a cast [-Wint-conversion]
+   29 |                 err = read_nvs(pnvs_handle,"storage", DO_0_VAL_ADDR, (uint32_t *)&DO_V0);
+      |                                ^~~~~~~~~~~
+      |                                |
+      |                                nvs_handle_t * {aka long unsigned int *}
+In file included from d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\mydo.h:24,
+                 from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/myDO.c:9:
+d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\nvs_interface.h:21:33: note: expected 'nvs_handle_t' {aka 'long unsigned int'} but argument is of type 'nvs_handle_t *' {aka 'long unsigned int *'}
+   21 | esp_err_t read_nvs(nvs_handle_t nvs_handle
+      |                    ~~~~~~~~~~~~~^~~~~~~~~~
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/myDO.c:43:32: warning: passing argument 1 of 'read_nvs' makes integer from pointer without a cast [-Wint-conversion]
+   43 |                 err = read_nvs(pnvs_handle,"storage", DO_100_VAL_ADDR, (uint32_t *)&DO_V100);
+      |                                ^~~~~~~~~~~
+      |                                |
+      |                                nvs_handle_t * {aka long unsigned int *}
+In file included from d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\mydo.h:24,
+                 from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/myDO.c:9:
+d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\nvs_interface.h:21:33: note: expected 'nvs_handle_t' {aka 'long unsigned int'} but argument is of type 'nvs_handle_t *' {aka 'long unsigned int *'}
+   21 | esp_err_t read_nvs(nvs_handle_t nvs_handle
+      |                    ~~~~~~~~~~~~~^~~~~~~~~~
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/myDO.c: In function 'get_DO':
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/myDO.c:139:34: warning: unused variable 'voltage' [-Wunused-variable]
+  139 |                         uint32_t voltage;
+      |                                  ^~~~~~~
+[5/11] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+In file included from d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\myph.h:22,
+                 from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:9:
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:14:
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/components/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+   17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+      |  ^~~~~~~
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c: In function 'send_data_task':
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:63:54: warning: passing argument 1 of 'Send_Data_to_Server' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   63 |                 is_send_server = Send_Data_to_Server(buff);
+      |                                                      ^~~~
+In file included from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:6:
+d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\sim_uart.h:17:38: note: expected 'const char *' but argument is of type 'volatile char *'
+   17 | bool Send_Data_to_Server(const char *Buffer_data);
+      |                          ~~~~~~~~~~~~^~~~~~~~~~~
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c: In function 'get_temp':
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:127:19: warning: unused variable 'err' [-Wunused-variable]
+  127 |         esp_err_t err;
+      |                   ^~~
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c: In function 'sd_task':
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:171:25: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  171 |                 sprintf(name_file, "null.txt");
+      |                         ^~~~~~~~~
+In file included from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:1:
+d:\esp\esp-idf\espressif\tools\xtensa-esp32-elf\esp-2022r1-11.2.0\xtensa-esp32-elf\xtensa-esp32-elf\sys-include\stdio.h:244:18: note: expected 'char * restrict' but argument is of type 'volatile char *'
+  244 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:173:16: warning: passing argument 1 of 'strcpy' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  173 |         strcpy(buff_sd, buff);
+      |                ^~~~~~~
+In file included from d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\common.h:16,
+                 from d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\at_function.h:10,
+                 from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:5:
+d:\esp\esp-idf\espressif\tools\xtensa-esp32-elf\esp-2022r1-11.2.0\xtensa-esp32-elf\xtensa-esp32-elf\sys-include\string.h:38:18: note: expected 'char * restrict' but argument is of type 'volatile char *'
+   38 | char    *strcpy (char *__restrict, const char *__restrict);
+      |                  ^
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:173:25: warning: passing argument 2 of 'strcpy' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  173 |         strcpy(buff_sd, buff);
+      |                         ^~~~
+In file included from d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\common.h:16,
+                 from d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\at_function.h:10,
+                 from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:5:
+d:\esp\esp-idf\espressif\tools\xtensa-esp32-elf\esp-2022r1-11.2.0\xtensa-esp32-elf\xtensa-esp32-elf\sys-include\string.h:38:36: note: expected 'const char * restrict' but argument is of type 'volatile char *'
+   38 | char    *strcpy (char *__restrict, const char *__restrict);
+      |                                    ^
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:174:16: warning: passing argument 1 of 'strcat' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  174 |         strcat(buff_sd, "\n");
+      |                ^~~~~~~
+In file included from d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\common.h:16,
+                 from d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\at_function.h:10,
+                 from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:5:
+d:\esp\esp-idf\espressif\tools\xtensa-esp32-elf\esp-2022r1-11.2.0\xtensa-esp32-elf\xtensa-esp32-elf\sys-include\string.h:34:18: note: expected 'char * restrict' but argument is of type 'volatile char *'
+   34 | char    *strcat (char *__restrict, const char *__restrict);
+      |                  ^
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:176:39: warning: passing argument 1 of 'sd_write_file' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  176 |         esp_err_t err = sd_write_file(name_file, buff_sd);
+      |                                       ^~~~~~~~~
+In file included from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:8:
+d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\sdcard.h:36:37: note: expected 'const char *' but argument is of type 'volatile char *'
+   36 | esp_err_t sd_write_file(const char *nameFile, char *format,...);
+      |                         ~~~~~~~~~~~~^~~~~~~~
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:176:50: warning: passing argument 2 of 'sd_write_file' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  176 |         esp_err_t err = sd_write_file(name_file, buff_sd);
+      |                                                  ^~~~~~~
+In file included from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:8:
+d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\sdcard.h:36:53: note: expected 'char *' but argument is of type 'volatile char *'
+   36 | esp_err_t sd_write_file(const char *nameFile, char *format,...);
+      |                                               ~~~~~~^~~~~~
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c: In function 'display_task':
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:218:38: warning: passing argument 1 of 'SSD1306_Puts' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  218 |                         SSD1306_Puts(time_buff, &Font_7x10, 1);
+      |                                      ^~~~~~~~~
+In file included from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:17:
+d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\ssd1306.h:107:25: note: expected 'char *' but argument is of type 'volatile char *'
+  107 | char SSD1306_Puts(char* str, FontDef_t* Font, SSD1306_COLOR_t color);
+      |                   ~~~~~~^~~
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c: In function 'task_get_data':
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:255:17: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  255 |         sprintf(buff, "%s|%.2f|%.2f|%.2f|%.2f", time_buff, data.temp, data.pH, data.DO, data.EC);
+      |                 ^~~~
+In file included from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:1:
+d:\esp\esp-idf\espressif\tools\xtensa-esp32-elf\esp-2022r1-11.2.0\xtensa-esp32-elf\xtensa-esp32-elf\sys-include\stdio.h:244:18: note: expected 'char * restrict' but argument is of type 'volatile char *'
+  244 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:258:72: warning: passing argument 6 of 'xTaskCreatePinnedToCore' from incompatible pointer type [-Wincompatible-pointer-types]
+  258 |         xTaskCreatePinnedToCore(sd_task, "sd_task", 2048 * 2, NULL, 5, p_sd_card, tskNO_AFFINITY);
+      |                                                                        ^~~~~~~~~
+      |                                                                        |
+      |                                                                        TaskHandle_t {aka struct tskTaskControlBlock *}
+In file included from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:48,
+                 from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/components/freertos/FreeRTOS-Kernel/include/freertos/semphr.h:41,
+                 from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/components/driver/include/driver/uart.h:17,
+                 from d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\common.h:17,
+                 from d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\at_function.h:10,
+                 from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:5:
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:350:62: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+  350 |                                         TaskHandle_t * const pvCreatedTask,
+      |                                         ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c: In function 'ds1307_task':
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:281:17: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  281 |         sprintf(time_buff, "%04d|%02d|%02d|%02d|%02d|%02d", time.tm_year + 1900 /*Add 1900 for better readability*/, time.tm_mon,
+      |                 ^~~~~~~~~
+In file included from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:1:
+d:\esp\esp-idf\espressif\tools\xtensa-esp32-elf\esp-2022r1-11.2.0\xtensa-esp32-elf\xtensa-esp32-elf\sys-include\stdio.h:244:18: note: expected 'char * restrict' but argument is of type 'volatile char *'
+  244 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:286:17: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  286 |         sprintf(name_file, "log%02d%02d", time.tm_mon,
+      |                 ^~~~~~~~~
+In file included from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:1:
+d:\esp\esp-idf\espressif\tools\xtensa-esp32-elf\esp-2022r1-11.2.0\xtensa-esp32-elf\xtensa-esp32-elf\sys-include\stdio.h:244:18: note: expected 'char * restrict' but argument is of type 'volatile char *'
+  244 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c: In function 'ds3231_task':
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:324:33: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  324 |                         sprintf(time_buff, "%04d|%02d|%02d|%02d|%02d|%02d", time.tm_year /*Add 1900 for better readability*/, time.tm_mon,
+      |                                 ^~~~~~~~~
+In file included from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:1:
+d:\esp\esp-idf\espressif\tools\xtensa-esp32-elf\esp-2022r1-11.2.0\xtensa-esp32-elf\xtensa-esp32-elf\sys-include\stdio.h:244:18: note: expected 'char * restrict' but argument is of type 'volatile char *'
+  244 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:329:33: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  329 |                         sprintf(name_file, "log%02d%02d", time.tm_mon,
+      |                                 ^~~~~~~~~
+In file included from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:1:
+d:\esp\esp-idf\espressif\tools\xtensa-esp32-elf\esp-2022r1-11.2.0\xtensa-esp32-elf\xtensa-esp32-elf\sys-include\stdio.h:244:18: note: expected 'char * restrict' but argument is of type 'volatile char *'
+  244 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+In file included from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:9:
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c: At top level:
+d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\myph.h:56:14: warning: 'convert_ADC_voltage' declared 'static' but never defined [-Wunused-function]
+   56 | static float convert_ADC_voltage(uint32_t ADC, uint32_t resolution, float V_ref);
+      |              ^~~~~~~~~~~~~~~~~~~
+In file included from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:8:
+d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\sdcard.h:28:21: warning: 'SD_TAG' defined but not used [-Wunused-variable]
+   28 | static const char * SD_TAG = "SD Card";
+      |                     ^~~~~~
+[6/11] Linking C static library esp-idf\main\libmain.a
+[7/11] Generating ld/sections.ld
+[8/11] Linking CXX executable app-template.elf
+[9/11] Generating binary image from built executable
+esptool.py v4.5.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/build/app-template.bin
+[10/11] cmd.exe /C "cd /D D:\esp\esp-idf\Espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\build\esp-idf\esptool_py && D:\esp\esp-idf\Espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/build/partition_table/partition-table.bin D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/build/app-template.bin"
+app-template.bin binary size 0x51830 bytes. Smallest app partition is 0x100000 bytes. 0xae7d0 bytes (68%) free.
+[10/11] cmd.exe /C "cd /D D:\esp\esp-idf\Espressif\frameworks\esp-idf-v5.0.1\components\esptool_py && D:\esp\esp-idf\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1 -D SERIAL_TOOL=D:/esp/esp-idf/Espressif/python_env/idf5.0_py3.11_env/Scripts/python.exe;;D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/build -P D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/components/esptool_py/run_serial_tool.cmake"
+esptool esp32 -p COM4 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 app-template.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.5.1
+Serial port COM4
+Connecting.....
+Chip is ESP32-D0WDQ6 (revision v1.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: ec:94:cb:70:45:1c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x00061fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26384 bytes to 16453...
+Writing at 0x00001000... (50 %)
+Writing at 0x000076ad... (100 %)
+Wrote 26384 bytes (16453 compressed) at 0x00001000 in 0.8 seconds (effective 265.2 kbit/s)...
+Hash of data verified.
+Compressed 333872 bytes to 187943...
+Writing at 0x00010000... (8 %)
+Writing at 0x0001c9f0... (16 %)
+Writing at 0x00026098... (25 %)
+Writing at 0x0002b96f... (33 %)
+Writing at 0x00031b36... (41 %)
+Writing at 0x000374ef... (50 %)
+Writing at 0x0003c9b6... (58 %)
+Writing at 0x000428ed... (66 %)
+Writing at 0x00048685... (75 %)
+Writing at 0x0004dcca... (83 %)
+Writing at 0x0005672c... (91 %)
+Writing at 0x0005ecfe... (100 %)
+Wrote 333872 bytes (187943 compressed) at 0x00010000 in 4.8 seconds (effective 556.1 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 299.3 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

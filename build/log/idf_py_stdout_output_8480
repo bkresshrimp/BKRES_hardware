@@ -1,0 +1,195 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\esp\esp-idf\Espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\build\bootloader\esp-idf\esptool_py && D:\esp\esp-idf\Espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6710 bytes. 0x8f0 bytes (8%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+In file included from d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\myph.h:22,
+                 from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:9:
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:14:
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/components/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+   17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+      |  ^~~~~~~
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c: In function 'send_data_task':
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:64:54: warning: passing argument 1 of 'Send_Data_to_Server' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   64 |                 is_send_server = Send_Data_to_Server(buff);
+      |                                                      ^~~~
+In file included from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:6:
+d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\sim_uart.h:17:38: note: expected 'const char *' but argument is of type 'volatile char *'
+   17 | bool Send_Data_to_Server(const char *Buffer_data);
+      |                          ~~~~~~~~~~~~^~~~~~~~~~~
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c: In function 'get_temp':
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:128:19: warning: unused variable 'err' [-Wunused-variable]
+  128 |         esp_err_t err;
+      |                   ^~~
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c: In function 'sd_task':
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:172:25: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  172 |                 sprintf(name_file, "null.txt");
+      |                         ^~~~~~~~~
+In file included from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:1:
+d:\esp\esp-idf\espressif\tools\xtensa-esp32-elf\esp-2022r1-11.2.0\xtensa-esp32-elf\xtensa-esp32-elf\sys-include\stdio.h:244:18: note: expected 'char * restrict' but argument is of type 'volatile char *'
+  244 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:174:16: warning: passing argument 1 of 'strcpy' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  174 |         strcpy(buff_sd, buff);
+      |                ^~~~~~~
+In file included from d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\common.h:16,
+                 from d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\at_function.h:10,
+                 from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:5:
+d:\esp\esp-idf\espressif\tools\xtensa-esp32-elf\esp-2022r1-11.2.0\xtensa-esp32-elf\xtensa-esp32-elf\sys-include\string.h:38:18: note: expected 'char * restrict' but argument is of type 'volatile char *'
+   38 | char    *strcpy (char *__restrict, const char *__restrict);
+      |                  ^
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:174:25: warning: passing argument 2 of 'strcpy' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  174 |         strcpy(buff_sd, buff);
+      |                         ^~~~
+In file included from d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\common.h:16,
+                 from d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\at_function.h:10,
+                 from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:5:
+d:\esp\esp-idf\espressif\tools\xtensa-esp32-elf\esp-2022r1-11.2.0\xtensa-esp32-elf\xtensa-esp32-elf\sys-include\string.h:38:36: note: expected 'const char * restrict' but argument is of type 'volatile char *'
+   38 | char    *strcpy (char *__restrict, const char *__restrict);
+      |                                    ^
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:175:16: warning: passing argument 1 of 'strcat' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  175 |         strcat(buff_sd, "\n");
+      |                ^~~~~~~
+In file included from d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\common.h:16,
+                 from d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\at_function.h:10,
+                 from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:5:
+d:\esp\esp-idf\espressif\tools\xtensa-esp32-elf\esp-2022r1-11.2.0\xtensa-esp32-elf\xtensa-esp32-elf\sys-include\string.h:34:18: note: expected 'char * restrict' but argument is of type 'volatile char *'
+   34 | char    *strcat (char *__restrict, const char *__restrict);
+      |                  ^
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:177:39: warning: passing argument 1 of 'sd_write_file' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  177 |         esp_err_t err = sd_write_file(name_file, buff_sd);
+      |                                       ^~~~~~~~~
+In file included from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:8:
+d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\sdcard.h:36:37: note: expected 'const char *' but argument is of type 'volatile char *'
+   36 | esp_err_t sd_write_file(const char *nameFile, char *format,...);
+      |                         ~~~~~~~~~~~~^~~~~~~~
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:177:50: warning: passing argument 2 of 'sd_write_file' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  177 |         esp_err_t err = sd_write_file(name_file, buff_sd);
+      |                                                  ^~~~~~~
+In file included from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:8:
+d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\sdcard.h:36:53: note: expected 'char *' but argument is of type 'volatile char *'
+   36 | esp_err_t sd_write_file(const char *nameFile, char *format,...);
+      |                                               ~~~~~~^~~~~~
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c: In function 'display_task':
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:219:38: warning: passing argument 1 of 'SSD1306_Puts' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  219 |                         SSD1306_Puts(time_buff, &Font_7x10, 1);
+      |                                      ^~~~~~~~~
+In file included from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:17:
+d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\ssd1306.h:107:25: note: expected 'char *' but argument is of type 'volatile char *'
+  107 | char SSD1306_Puts(char* str, FontDef_t* Font, SSD1306_COLOR_t color);
+      |                   ~~~~~~^~~
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c: In function 'task_get_data':
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:256:17: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  256 |         sprintf(buff, "%s|%.2f|%.2f|%.2f|%.2f", time_buff, data.temp, data.pH, data.DO, data.EC);
+      |                 ^~~~
+In file included from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:1:
+d:\esp\esp-idf\espressif\tools\xtensa-esp32-elf\esp-2022r1-11.2.0\xtensa-esp32-elf\xtensa-esp32-elf\sys-include\stdio.h:244:18: note: expected 'char * restrict' but argument is of type 'volatile char *'
+  244 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:259:72: warning: passing argument 6 of 'xTaskCreatePinnedToCore' from incompatible pointer type [-Wincompatible-pointer-types]
+  259 |         xTaskCreatePinnedToCore(sd_task, "sd_task", 2048 * 2, NULL, 5, p_sd_card, tskNO_AFFINITY);
+      |                                                                        ^~~~~~~~~
+      |                                                                        |
+      |                                                                        TaskHandle_t {aka struct tskTaskControlBlock *}
+In file included from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:48,
+                 from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/components/freertos/FreeRTOS-Kernel/include/freertos/semphr.h:41,
+                 from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/components/driver/include/driver/uart.h:17,
+                 from d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\common.h:17,
+                 from d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\at_function.h:10,
+                 from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:5:
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:350:62: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+  350 |                                         TaskHandle_t * const pvCreatedTask,
+      |                                         ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c: In function 'ds1307_task':
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:282:17: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  282 |         sprintf(time_buff, "%04d|%02d|%02d|%02d|%02d|%02d", time.tm_year + 1900 /*Add 1900 for better readability*/, time.tm_mon,
+      |                 ^~~~~~~~~
+In file included from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:1:
+d:\esp\esp-idf\espressif\tools\xtensa-esp32-elf\esp-2022r1-11.2.0\xtensa-esp32-elf\xtensa-esp32-elf\sys-include\stdio.h:244:18: note: expected 'char * restrict' but argument is of type 'volatile char *'
+  244 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:287:17: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  287 |         sprintf(name_file, "log%02d%02d", time.tm_mon,
+      |                 ^~~~~~~~~
+In file included from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:1:
+d:\esp\esp-idf\espressif\tools\xtensa-esp32-elf\esp-2022r1-11.2.0\xtensa-esp32-elf\xtensa-esp32-elf\sys-include\stdio.h:244:18: note: expected 'char * restrict' but argument is of type 'volatile char *'
+  244 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c: In function 'ds3231_task':
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:325:33: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  325 |                         sprintf(time_buff, "%04d|%02d|%02d|%02d|%02d|%02d", time.tm_year /*Add 1900 for better readability*/, time.tm_mon,
+      |                                 ^~~~~~~~~
+In file included from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:1:
+d:\esp\esp-idf\espressif\tools\xtensa-esp32-elf\esp-2022r1-11.2.0\xtensa-esp32-elf\xtensa-esp32-elf\sys-include\stdio.h:244:18: note: expected 'char * restrict' but argument is of type 'volatile char *'
+  244 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:330:33: warning: passing argument 1 of 'sprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  330 |                         sprintf(name_file, "log%02d%02d", time.tm_mon,
+      |                                 ^~~~~~~~~
+In file included from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:1:
+d:\esp\esp-idf\espressif\tools\xtensa-esp32-elf\esp-2022r1-11.2.0\xtensa-esp32-elf\xtensa-esp32-elf\sys-include\stdio.h:244:18: note: expected 'char * restrict' but argument is of type 'volatile char *'
+  244 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+In file included from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:9:
+D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c: At top level:
+d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\myph.h:56:14: warning: 'convert_ADC_voltage' declared 'static' but never defined [-Wunused-function]
+   56 | static float convert_ADC_voltage(uint32_t ADC, uint32_t resolution, float V_ref);
+      |              ^~~~~~~~~~~~~~~~~~~
+In file included from D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/main/main.c:8:
+d:\esp\esp-idf\espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\lib\sdcard.h:28:21: warning: 'SD_TAG' defined but not used [-Wunused-variable]
+   28 | static const char * SD_TAG = "SD Card";
+      |                     ^~~~~~
+[3/8] Linking C static library esp-idf\main\libmain.a
+[4/8] Generating ld/sections.ld
+[5/8] Linking CXX executable app-template.elf
+[6/8] Generating binary image from built executable
+esptool.py v4.5.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/build/app-template.bin
+[7/8] cmd.exe /C "cd /D D:\esp\esp-idf\Espressif\frameworks\esp-idf-v5.0.1\bkres_update_idf-master\build\esp-idf\esptool_py && D:\esp\esp-idf\Espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/build/partition_table/partition-table.bin D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/build/app-template.bin"
+app-template.bin binary size 0x33d50 bytes. Smallest app partition is 0x100000 bytes. 0xcc2b0 bytes (80%) free.
+[7/8] cmd.exe /C "cd /D D:\esp\esp-idf\Espressif\frameworks\esp-idf-v5.0.1\components\esptool_py && D:\esp\esp-idf\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1 -D SERIAL_TOOL=D:/esp/esp-idf/Espressif/python_env/idf5.0_py3.11_env/Scripts/python.exe;;D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/bkres_update_idf-master/build -P D:/esp/esp-idf/Espressif/frameworks/esp-idf-v5.0.1/components/esptool_py/run_serial_tool.cmake"
+esptool esp32 -p COM4 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 app-template.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.5.1
+Serial port COM4
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: c8:f0:9e:f6:e6:40
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x00043fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26384 bytes to 16453...
+Writing at 0x00001000... (50 %)
+Writing at 0x000076ad... (100 %)
+Wrote 26384 bytes (16453 compressed) at 0x00001000 in 1.2 seconds (effective 176.6 kbit/s)...
+Hash of data verified.
+Compressed 212304 bytes to 114716...
+Writing at 0x00010000... (12 %)
+Writing at 0x0001c72d... (25 %)
+Writing at 0x00021fcb... (37 %)
+Writing at 0x00027c2c... (50 %)
+Writing at 0x0002d3d9... (62 %)
+Writing at 0x00035df1... (75 %)
+Writing at 0x0003deed... (87 %)
+Writing at 0x00043d3c... (100 %)
+Wrote 212304 bytes (114716 compressed) at 0x00010000 in 3.0 seconds (effective 556.9 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 204.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
